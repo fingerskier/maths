@@ -1,0 +1,2 @@
+# maths
+Mathematics self-study
