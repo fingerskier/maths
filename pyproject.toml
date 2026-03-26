@@ -1,0 +1,36 @@
+[project]
+name = "maths"
+version = "0.1.0"
+description = "Mathematics self-study coursework with progressive leveling"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "sympy>=1.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-timeout>=2.1",
+]
+
+[project.scripts]
+maths-progress = "progress:main"
+
+[tool.pytest.ini_options]
+testpaths = ["coursework"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+markers = [
+    "level0: Foundations of Mathematics",
+    "level1: Calculus and Linear Algebra",
+    "level2: Discrete Mathematics and Combinatorics",
+    "level3: Optimization",
+    "level4: Probability and Statistics",
+    "level5: Numerical and Scientific Computing",
+    "level6: Machine Learning and Data Science",
+    "level7: Advanced Simulation and Data-Integrated Methods",
+    "level8: Applied Domains",
+]
